@@ -1,77 +1,42 @@
+<html>
+<body>
+<form>
+Enter number1:<input type="text" name="num1" />
+<br>
+Enter number2:<input type="text" name="num2" />
+<br>
+<input type="submit" />
+<br>
+</form>
+</body>
+</html>
+
 <?php
-     #Built-in Functions
-	 #Mathematical Functions
-     $a=abs(-5);
-	 echo("The absolute value of -5".$a);
-	 echo "<br>";
-	 $b=sqrt(16);
-	 echo("$b");
-	 echo "<br>";
-	 $c=rand(1,100);
-	 echo("$c");
-	 echo "<br>";
-	 $d=round(3.7);
-	 echo("$d");
-	 echo "<br>";
-	 $e=ceil(3.2);
-	 echo("$e");
-	 echo "<br>";
-	 $f=floor(3.8);
-	 echo("$f");
-	 echo "<br>";
-	 $g=pow(2,3);
-	 echo("$g");
-	 echo "<br>"; 
-	 $h=max(5,8,3);
-	 echo("$h");
-	 echo "<br>";
-	 $i=min(5,8,3);
-	 echo("$i");
-	 echo "<br>";
-	 #String Funtions
-	 $j=strlen("Hello, World!");
-	 echo("$j");
-	 echo "<br>";
-	 $k=strpos("Hello, World!","World");
-	 echo("$k");
-	 echo "<br>";
-	 $l=str_replace("World", "Universe", "Hello, World!");
-	 echo("$l");
-	 echo "<br>";
-	 $m=substr("Hello, World!", 0, 5);
-	 echo("$m");
-	 echo "<br>";
-	 $n=strtolower("Hello, World!");
-	 echo("$n");
-	 echo "<br>";
-	 $o=strtoupper("Hello, World!");
-	 echo("$o");
-	 echo "<br>";
-	 $p=ucfirst("hello, world!");
-	 echo("$p");
-	 echo "<br>";
-	 $q=strrev("Hello, World!");
-	 echo("$q");
-	 echo "<br>";
-	 $r=trim(" Hello, World! ");
-	 echo("$r");
-	 echo "<br>";
-	 #Date and Time Functions
-	 $s=date("Y-m-d H:i:s");
-	 echo("$s");
-	 echo "<br>";
-	 $t=time();
-	 echo("$t");
-	 echo "<br>";
-	 $u=strtotime("2023-08-01");
-     echo("$u");
-	 echo "<br>";
-	 $v=gmdate("Y-m-d H:i:s");
-	 echo("$v");
-	 echo "<br>";
-	 $w=mktime(12, 0, 0, 8, 1, 2023);
-	 echo("$w");
-	 echo "<br>";
-	 $x=date_default_timezone_set("America/New_York");
-     echo("$x");
+error_reporting(0);
+$myval1=$_REQUEST['num1'];
+$myval2=$_REQUEST['num2'];
+
+function add($myval1,$myval2)
+{
+	return $myval1+$myval2;
+}
+function sub($myval1,$myval2)
+{
+	return $myval1-$myval2;
+}
+function mul($myval1,$myval2)
+{
+	return $myval1*$myval2;
+}
+$sum=add($myval1,$myval2);
+echo "Addition is:  " .$sum;
+echo "<br>";
+
+$subtraction=sub($myval1,$myval2);
+echo "Subtraction is: " .$subtraction;
+echo"<br>";
+
+$multiplication=mul($myval1,$myval2);
+echo "Multiplication is: " .$multiplication;
+echo"<br>";
 ?>
